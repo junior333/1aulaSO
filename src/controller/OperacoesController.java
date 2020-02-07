@@ -1,9 +1,5 @@
 package controller;
 
-import java.awt.BufferCapabilities;
-
-import org.omg.CORBA.SystemException;
-
 public class OperacoesController {
 	
 	public OperacoesController() {
@@ -34,5 +30,12 @@ public class OperacoesController {
 		double tempoTotal = tempoFinal - tempoInicial;
 		tempoTotal = tempoTotal/Math.pow(10, 9);
 		System.out.println("Buffer ==> "+ tempoTotal+" segundos");
+	}
+	
+	public void operacaoFrase(String frase) {
+		String[] palavras = frase.split(" ");
+		for(String palavra : palavras) {
+			System.out.println(palavra);
+		}
 	}
 }
